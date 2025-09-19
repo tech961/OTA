@@ -1,10 +1,10 @@
-﻿using System.Reflection;
+using System.Reflection;
 using Rs.Domain.Common.Interfaces;
 
 namespace Rs.Persistence.DbPersistence;
 
 public class DataContext(DbContextOptions<DataContext> options)
-    : IdentityDbContext<User, Role, Guid>(options), IDataContext
+    : DbContext(options), IDataContext
 {
     public override int SaveChanges()
     {

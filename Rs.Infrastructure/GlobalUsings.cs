@@ -1,9 +1,7 @@
 global using System.IdentityModel.Tokens.Jwt;
-global using System.Security.Claims;
 global using System.Text;
 global using MediatR;
 global using Microsoft.AspNetCore.Authorization;
-global using Microsoft.AspNetCore.Identity;
 global using Microsoft.EntityFrameworkCore;
 global using Microsoft.Extensions.Options;
 global using Microsoft.IdentityModel.Tokens;
