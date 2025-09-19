@@ -9,4 +9,3 @@ global using Microsoft.Extensions.Options;
 global using Microsoft.IdentityModel.Tokens;
 global using Newtonsoft.Json;
 global using Quartz;
-global using Rs.Application.Common.Interfaces;

@@ -16,6 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Interceptors\" />
       <Folder Include="Repositories\" />
     </ItemGroup>
 </Project>
