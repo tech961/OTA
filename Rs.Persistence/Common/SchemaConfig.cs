@@ -9,5 +9,4 @@ public class SchemaConfig
     public const string File = "File";
     public const string RealEstate = "RealEstate";
     public const string Pet = "Pet";
-    public const string PetShop = "PetShop";
 }
