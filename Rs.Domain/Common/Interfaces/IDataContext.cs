@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Rs.Domain.Aggregates.PetShop;
 
 namespace Rs.Domain.Common.Interfaces;
@@ -20,7 +21,8 @@ public interface IDataContext
     DbSet<Wishlist> Wishlists { get; }
     DbSet<DiscountCoupon> DiscountCoupons { get; }
     DbSet<InventoryTransaction> InventoryTransactions { get; }
+    DatabaseFacade Database { get; }
     int SaveChanges();
 
-    Task<int> SaveChangesAsync(CancellationToken cancellationToken);
+    Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
 }
