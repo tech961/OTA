@@ -28,4 +28,9 @@
       <Folder Include="wwwroot\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\uploads\pet\ChatGPT_Image_Jun_9,_2025,_10_55_01_PM_6b428844-b7c1-4a50-95f6-e62d0dd7efa7.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\uploads\pet\photo_2025_08_04_20_23_09_df393dfe-a816-4a41-a676-994f9e219c94.jpg" />
+    </ItemGroup>
+
 </Project>

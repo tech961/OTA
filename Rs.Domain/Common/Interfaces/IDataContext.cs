@@ -1,5 +1,3 @@
-using Microsoft.EntityFrameworkCore;
-
 namespace Rs.Domain.Common.Interfaces;
 
 public interface IDataContext

@@ -1,10 +1,7 @@
 using FluentValidation;
-using Rs.Api.Services;
 using Rs.Domain.Common.Interfaces;
-using Rs.Infrastructure.Services;
 using Rs.Persistence;
 using Rs.Persistence.DbPersistence;
-using IUser = Rs.Domain.Common.Interfaces.IUser;
 
 namespace Rs.Api.Registrars;
 
