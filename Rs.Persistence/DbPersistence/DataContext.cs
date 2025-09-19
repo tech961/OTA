@@ -1,5 +1,4 @@
-﻿using System.Reflection;
-using Rs.Domain.Aggregates.Auths;
+using System.Reflection;
 using Rs.Domain.Aggregates.Blogs;
 using Rs.Domain.Aggregates.Files;
 using Rs.Domain.Aggregates.Provinces;
@@ -12,7 +11,7 @@ using Rs.Domain.Common.Interfaces;
 namespace Rs.Persistence.DbPersistence;
 
 public class DataContext(DbContextOptions<DataContext> options)
-    : IdentityDbContext<User, Role, Guid>(options), IDataContext
+    : DbContext(options), IDataContext
 {
     public DbSet<ProductCategory> ProductCategories { get; init; }
     public DbSet<Product> Products { get; init; }
@@ -32,8 +31,6 @@ public class DataContext(DbContextOptions<DataContext> options)
 
     public DbSet<Blog> Blogs { get; init; }
 
-    public DbSet<UserVerificationCode> UserVerificationCodes { get; init; }
-
     public DbSet<Province> Provinces { get; init; }
 
     public DbSet<City> Cities { get; init; }
@@ -43,7 +40,7 @@ public class DataContext(DbContextOptions<DataContext> options)
     public DbSet<Neighborhood> Neighborhoods { get; init; }
 
     public DbSet<Request> Requests { get; init; }
-    
+
     public DbSet<FileManager> FileManagers { get; init; }
 
     public DbSet<RealEstate> RealEstates { get; init; }

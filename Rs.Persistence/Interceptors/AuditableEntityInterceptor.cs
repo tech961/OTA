@@ -1,12 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Diagnostics;
-using Rs.Domain.Common.Interfaces;
 using Rs.Domain.Primitives;
 
 namespace Rs.Persistence.Interceptors;
 
 public class AuditableEntityInterceptor(
-    IUser user,
     TimeProvider dateTime) : SaveChangesInterceptor
 {
     public override InterceptionResult<int> SavingChanges(
@@ -40,11 +38,9 @@ public class AuditableEntityInterceptor(
                 switch (entry.State)
                 {
                     case EntityState.Added:
-                        entry.Entity.CreatedBy = user.Id;
                         entry.Entity.Created = utcNow;
                         break;
                     case EntityState.Modified:
-                        entry.Entity.LastModifiedBy = user.Id;
                         entry.Entity.LastModified = utcNow;
                         break;
                 }
@@ -56,8 +52,8 @@ public class AuditableEntityInterceptor(
 public static class Extensions
 {
     public static bool HasChangedOwnedEntities(this EntityEntry entry) =>
-        entry.References.Any(r => 
-            r.TargetEntry != null && 
-            r.TargetEntry.Metadata.IsOwned() && 
+        entry.References.Any(r =>
+            r.TargetEntry != null &&
+            r.TargetEntry.Metadata.IsOwned() &&
             r.TargetEntry.State is EntityState.Added or EntityState.Modified);
 }
