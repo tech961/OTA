@@ -1,0 +1,75 @@
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+
+#nullable disable
+
+namespace Rs.Persistence.Migrations
+{
+    /// <inheritdoc />
+    public partial class Pet_Fixed_Prop : Migration
+    {
+        /// <inheritdoc />
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.AlterColumn<int>(
+                name: "Species",
+                schema: "Pet",
+                table: "Pets",
+                type: "int",
+                maxLength: 50,
+                nullable: false,
+                oldClrType: typeof(string),
+                oldType: "nvarchar(50)",
+                oldMaxLength: 50);
+
+            migrationBuilder.AlterColumn<int>(
+                name: "Gender",
+                schema: "Pet",
+                table: "Pets",
+                type: "int",
+                maxLength: 10,
+                nullable: false,
+                oldClrType: typeof(string),
+                oldType: "nvarchar(10)",
+                oldMaxLength: 10);
+
+            migrationBuilder.AddColumn<int>(
+                name: "LivingSituation",
+                schema: "Pet",
+                table: "Pets",
+                type: "int",
+                nullable: false,
+                defaultValue: 0);
+        }
+
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropColumn(
+                name: "LivingSituation",
+                schema: "Pet",
+                table: "Pets");
+
+            migrationBuilder.AlterColumn<string>(
+                name: "Species",
+                schema: "Pet",
+                table: "Pets",
+                type: "nvarchar(50)",
+                maxLength: 50,
+                nullable: false,
+                oldClrType: typeof(int),
+                oldType: "int",
+                oldMaxLength: 50);
+
+            migrationBuilder.AlterColumn<string>(
+                name: "Gender",
+                schema: "Pet",
+                table: "Pets",
+                type: "nvarchar(10)",
+                maxLength: 10,
+                nullable: false,
+                oldClrType: typeof(int),
+                oldType: "int",
+                oldMaxLength: 10);
+        }
+    }
+}
