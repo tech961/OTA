@@ -17,7 +17,6 @@ global using Rs.Application.Abstractions.Behaviors;
 global using Rs.Application.Common.BasicModels;
 global using Rs.Application.Common.Interfaces;
 global using Rs.Application.Exceptions;
-global using Rs.Domain.Aggregates.Auths;
 global using Rs.Domain.Options;
 global using Rs.Domain.Shared;
 global using Serilog;

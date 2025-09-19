@@ -14,26 +14,6 @@ namespace Rs.Persistence.DbPersistence;
 public class DataContext(DbContextOptions<DataContext> options)
     : IdentityDbContext<User, Role, Guid>(options), IDataContext
 {
-    public DbSet<Blog> Blogs { get; init; }
-
-    public DbSet<UserVerificationCode> UserVerificationCodes { get; init; }
-
-    public DbSet<Province> Provinces { get; init; }
-
-    public DbSet<City> Cities { get; init; }
-
-    public DbSet<District> Districts { get; init; }
-
-    public DbSet<Neighborhood> Neighborhoods { get; init; }
-
-    public DbSet<Request> Requests { get; init; }
-    
-    public DbSet<FileManager> FileManagers { get; init; }
-
-    public DbSet<RealEstate> RealEstates { get; init; }
-
-    public DbSet<Pet> Pets { get; init; }
-
     public DbSet<ProductCategory> ProductCategories { get; init; }
     public DbSet<Product> Products { get; init; }
     public DbSet<ProductImage> ProductImages { get; init; }

@@ -19,9 +19,4 @@
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
         
     </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Features\Auths\CommandHandlers\" />
-      <Folder Include="Features\Provinces\QueryHandlers\" />
-    </ItemGroup>
 </Project>

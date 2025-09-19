@@ -16,6 +16,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Configurations\Pets\" />
+      <Folder Include="Repositories\" />
     </ItemGroup>
 </Project>
