@@ -9,6 +9,7 @@ public class MediatrRegistrar: IWebApplicationBuilderRegistrar
             cfg.RegisterServicesFromAssembly(typeof(BaseModel).Assembly);
             cfg.AddBehavior(typeof(IPipelineBehavior<,>), typeof(LoggingPipelineBehavior<,>));
             cfg.AddBehavior(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+            cfg.AddBehavior(typeof(IPipelineBehavior<,>), typeof(UnitOfWorkBehavior<,>));
         });
     }
 }
