@@ -30,6 +30,26 @@ public class DataContext(DbContextOptions<DataContext> options)
     public DbSet<DiscountCoupon> DiscountCoupons { get; init; }
     public DbSet<InventoryTransaction> InventoryTransactions { get; init; }
 
+    public DbSet<Blog> Blogs { get; init; }
+
+    public DbSet<UserVerificationCode> UserVerificationCodes { get; init; }
+
+    public DbSet<Province> Provinces { get; init; }
+
+    public DbSet<City> Cities { get; init; }
+
+    public DbSet<District> Districts { get; init; }
+
+    public DbSet<Neighborhood> Neighborhoods { get; init; }
+
+    public DbSet<Request> Requests { get; init; }
+    
+    public DbSet<FileManager> FileManagers { get; init; }
+
+    public DbSet<RealEstate> RealEstates { get; init; }
+
+    public DbSet<Pet> Pets { get; init; }
+
     public override int SaveChanges()
     {
         try

@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Rs.Domain.Aggregates.PetShop;
 
 namespace Rs.Domain.Common.Interfaces;
