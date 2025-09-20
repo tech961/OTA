@@ -1,0 +1,12 @@
+**/bin/
+**/obj/
+**/TestResults/
+**/node_modules/
+.git
+.gitignore
+.vs
+.vscode
+*.user
+*.suo
+*.swp
+*.log
