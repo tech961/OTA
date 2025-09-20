@@ -1,6 +1,6 @@
 ﻿namespace Rs.Api.Registrars;
 
-public class LoggingRegistrar: IWebApplicationBuilderRegistrar
+public class LoggingRegistrar : IWebApplicationBuilderRegistrar
 {
     public void RegisterServices(WebApplicationBuilder builder)
     {
@@ -8,3 +8,4 @@ public class LoggingRegistrar: IWebApplicationBuilderRegistrar
             configuration.ReadFrom.Configuration(context.Configuration));
     }
 }
+    

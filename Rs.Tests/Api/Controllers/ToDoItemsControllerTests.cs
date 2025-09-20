@@ -1,3 +1,5 @@
+using MediatR;
+
 namespace Rs.Tests.Api.Controllers;
 
 public class ToDoItemsControllerTests

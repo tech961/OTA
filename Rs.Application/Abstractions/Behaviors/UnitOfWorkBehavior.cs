@@ -1,3 +1,5 @@
+using Rs.Domain.Common.Interfaces;
+
 namespace Rs.Application.Abstractions.Behaviors;
 
 public sealed class UnitOfWorkBehavior<TRequest, TResponse>
