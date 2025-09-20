@@ -5,4 +5,8 @@ global using Microsoft.AspNetCore.Http;
 global using Microsoft.EntityFrameworkCore;
 global using Microsoft.Extensions.Logging;
 global using Rs.Application.Abstractions.Messaging;
+global using Rs.Application.ToDos.Models;
+global using Rs.Domain.Common.Interfaces.Repositories;
 global using Rs.Domain.Shared;
+global using Rs.Domain.ToDos;
+global using Rs.Domain.ToDos.Services;

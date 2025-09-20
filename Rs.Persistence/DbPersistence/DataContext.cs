@@ -1,11 +1,14 @@
 using System.Reflection;
 using Rs.Domain.Common.Interfaces;
+using Rs.Domain.ToDos;
 
 namespace Rs.Persistence.DbPersistence;
 
 public class DataContext(DbContextOptions<DataContext> options)
     : DbContext(options), IDataContext
 {
+    public DbSet<ToDoItem> ToDoItems => Set<ToDoItem>();
+
     public override int SaveChanges()
     {
         try
